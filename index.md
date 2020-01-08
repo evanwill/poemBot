@@ -7,9 +7,9 @@ Easy to read, carry in your pocket, and share with your friends: poems printed o
 PoemBot is a [Raspberry Pi](https://www.raspberrypi.org/) connected to a [thermal receipt printer](https://www.adafruit.com/products/597) offering physical prints from a daily poetry website at the touch of a button. It was developed to help promote the [Vandal Poem of the Day](http://poetry.lib.uidaho.edu/) project which seeks to bring relevant contemporary poetry to University of Idaho and the broader Idaho community.
 In addition to printing poems, poemBot does other fun stuff. It goes to conferences, attends poetry readings, creates contact cards for the library, and prints stuff for special events! 
 
-Here is a little video of the earliest prototype: https://twitter.com/VandalPoem/status/704377485593432065 
+Here is a little video of the earliest prototype: <https://twitter.com/VandalPoem/status/704377485593432065>
 
-And here are slides from a presentation at DLF Forum 2016: https://osf.io/wub5g/
+And here are slides from a presentation at DLF Forum 2016: <https://osf.io/wub5g/>
 
 Originally based on [Adafruit IoT Printer](https://learn.adafruit.com/pi-thermal-printer/overview), poemBot uses a version of the printer library from Adafruit [Python-Thermal-Printer](https://github.com/adafruit/Python-Thermal-Printer/blob/master/Adafruit_Thermal.py).
 
@@ -17,9 +17,8 @@ A full example implementation is available as `poemsMain.py` using public domain
 
 ## Case and Wiring
 
-Our wiring mostly follows [Adafruit IoT Printer](https://learn.adafruit.com/pi-thermal-printer/overview). 
-However, to simplify construction and reuse, I replaced the t-cobbler with jumpers soldered to the components, inspired by [simonmonk's Squid](https://github.com/simonmonk/squid). 
-This makes it easy to assemble, modify, and demo. 
+Our physical set up mostly follows [Adafruit IoT Printer](https://learn.adafruit.com/pi-thermal-printer/overview). 
+However, to simplify construction and reuse, I replaced the t-cobbler with jumpers soldered to the components, inspired by [simonmonk's Squid](https://github.com/simonmonk/squid). This makes it easy to assemble, modify, and demo. 
 
 ![squid button](images/squid2.JPG)
 
@@ -28,7 +27,6 @@ I built cases out of 1x6 boards to give the poemBot a solid home.
 ![poemBot wooden case](images/poemBot3.JPG)
 
 To simplify set up, the basic GPIO pin connections are marked on a leaf [poembot_leaf.png](poembot_leaf.png) or printable [poembot_leaf.pdf](poembot_leaf.pdf), based on [simonmonk's Raspberry Leaf](http://www.doctormonk.com/2013/02/raspberry-pi-and-breadboard-raspberry.html) concept.
-
 Here's what it looks like inside:
 
 ![poemBot insides](images/poemBot_inside.JPG)
@@ -95,10 +93,21 @@ Now, when you plug in the poemBot, it starts up after a minute ready to print po
 When you press the button, it prints a poem. 
 When you hold the button for a few seconds, it will shutdown.
 
+## Other uses in the wild
+
+- Wooster [intro-to-dh course](https://jacobheil.github.io/intro-to-dh/prompts/poetry_month.html) (Jacob Heil), [github](https://github.com/WoosterDH/poemBot-Scripts), [tweet](https://twitter.com/dr_heil/status/989482390388117504)
+- Digital Scholarship @ Swarthmore, [fork](https://github.com/swat-ds/poemBot)
+- Lewis & Clark students (Sophia Horigan, Raspberry Pi workshop), https://perma.cc/W3N8-VJL3
+- Mentioned by NCSU [bookBot article](http://hyperrhiz.io/hyperrhiz18/kits/wust-bookbot-technical.html)
+- At University of Nebraska–Lincoln Libraries ([news item](https://news.unl.edu/newsrooms/today/article/poetry-month-celebrations-open-with-reading-exhibition/))
+
 ## References
 
-UBC RAD-device, https://github.com/asistubc/RAD-device
+Evan Williamson and Devin Becker, "Programming Poetry: Using a Poem Printer and Web Programming to Build Vandal Poem of the Day", *code4lib Journal* 45 (Aug 9, 2019), https://journal.code4lib.org/articles/14575 
 
-Little Box of Poems, http://www.suppertime.co.uk/blogmywiki/2012/12/pi-poems/
+UBC RAD-device, <https://github.com/asistubc/RAD-device>
 
-Adafruit IoT Printer, https://learn.adafruit.com/pi-thermal-printer/overview
+Little Box of Poems, <http://www.suppertime.co.uk/blogmywiki/2012/12/pi-poems/>
+
+Adafruit IoT Printer, <https://learn.adafruit.com/pi-thermal-printer/overview>
+
