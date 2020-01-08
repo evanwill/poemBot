@@ -17,7 +17,7 @@ A full example implementation is available as `poemsMain.py` using public domain
 
 ## Case and Wiring
 
-Our physical set up mostly follows [Adafruit IoT Printer](https://learn.adafruit.com/pi-thermal-printer/overview). 
+Our wiring mostly follows [Adafruit IoT Printer](https://learn.adafruit.com/pi-thermal-printer/overview). 
 However, to simplify construction and reuse, I replaced the t-cobbler with jumpers soldered to the components, inspired by [simonmonk's Squid](https://github.com/simonmonk/squid). This makes it easy to assemble, modify, and demo. 
 
 ![squid button](images/squid2.JPG)
@@ -110,4 +110,3 @@ UBC RAD-device, <https://github.com/asistubc/RAD-device>
 Little Box of Poems, <http://www.suppertime.co.uk/blogmywiki/2012/12/pi-poems/>
 
 Adafruit IoT Printer, <https://learn.adafruit.com/pi-thermal-printer/overview>
-
