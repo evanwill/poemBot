@@ -29,6 +29,8 @@ I built cases out of 1x6 boards to give the poemBot a solid home.
 
 To simplify set up, the basic GPIO pin connections are marked on a leaf [poembot_leaf.png](poembot_leaf.png) or printable [poembot_leaf.pdf](poembot_leaf.pdf), based on [simonmonk's Raspberry Leaf](http://www.doctormonk.com/2013/02/raspberry-pi-and-breadboard-raspberry.html) concept.
 
+For Rasberry Pi Model A & B version, see where to plug-in GPIO pin connections at [jumper_diagram.png](images/jumper_diagram.png).
+
 Here's what it looks like inside:
 
 ![poemBot insides](images/poemBot_inside.JPG)
@@ -78,6 +80,14 @@ Convert the encoding to CP437.
 
 The Raspberry Pi needs to be set up to run headless (I used the official [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) minimal image).
 SSH in for set up and testing. 
+
+### Install Dependencies:
+Install the serial python library to communicate with printer:
+```
+sudo apt install python-serial
+```
+
+### Start on Boot Method 1:
 After testing the Python main loop and poem printing, set it to load on boot by editing rc.local:
 
 ```
@@ -91,9 +101,46 @@ cd /home/pi/poemBot
 python poemsMain.py &
 ```
 
+### Start on Boot Method 2:
+If using `rc.local` does not work for you, then an alternative is to create a service with `systemctl`.
+
+Create a service file:
+```
+sudo nano /etc/systemd/system/poems.service
+```
+
+Here is an example file.  This assumes that the poemBot directory is located in `/home/pi/poemBot`.
+
+```
+[Unit]
+Description=PoemBot
+After=multi-user.target
+
+[Service]
+ExecStart=/home/pi/poemBot/poemsMain.py
+WorkingDirectory=/home/pi/poemBot
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Once the poems.service file is saved. Then you can run this command to start it:
+
+```
+sudo systemctl start poems.service
+```
+
+You can check to see if it is running proprerly (without errors) with this command:
+```
+systemctl status poems.service
+```
+
+
+### After Restarting:
 Now, when you plug in the poemBot, it starts up after a minute ready to print poems. 
 When you press the button, it prints a poem. 
 When you hold the button for a few seconds, it will shutdown.
+
 
 ## Other uses in the wild
 
