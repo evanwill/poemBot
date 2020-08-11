@@ -29,6 +29,8 @@ I built cases out of 1x6 boards to give the poemBot a solid home.
 
 To simplify set up, the basic GPIO pin connections are marked on a leaf [poembot_leaf.png](poembot_leaf.png) or printable [poembot_leaf.pdf](poembot_leaf.pdf), based on [simonmonk's Raspberry Leaf](http://www.doctormonk.com/2013/02/raspberry-pi-and-breadboard-raspberry.html) concept.
 
+For Rasberry Pi Model A & B version, see where to plug-in GPIO pin connections at [jumper_diagram.png](images/jumper_diagram.png).
+
 Here's what it looks like inside:
 
 ![poemBot insides](images/poemBot_inside.JPG)
